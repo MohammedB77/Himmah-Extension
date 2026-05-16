@@ -31,8 +31,6 @@
 
 - 🧩 تحريك وترتيب الكروت بحرية  
 
--
-
 
 
 <img width="381" height="717" alt="image" src="https://github.com/user-attachments/assets/e9c13a1f-2691-4a87-ad99-61a1cdba771d" />
