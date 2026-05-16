@@ -16,6 +16,9 @@
 - 🌌 واجهة هادئة ومريحة للتركيز
 - 💾 حفظ تلقائي للإعدادات والأهداف
 - ⚡ تجربة خفيفة وسريعة
+<img width="381" height="717" alt="image" src="https://github.com/user-attachments/assets/e9c13a1f-2691-4a87-ad99-61a1cdba771d" />
+
+
 
 <img width="657" height="642" alt="image" src="https://github.com/user-attachments/assets/621acb6f-59a1-4ccd-b837-d9681ad47cc9" />
 
