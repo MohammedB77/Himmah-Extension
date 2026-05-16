@@ -17,6 +17,8 @@
 - 💾 حفظ تلقائي للإعدادات والأهداف
 - ⚡ تجربة خفيفة وسريعة
 
+<img width="657" height="642" alt="image" src="https://github.com/user-attachments/assets/621acb6f-59a1-4ccd-b837-d9681ad47cc9" />
+
 ---
 # ❓ المشكلة
 
