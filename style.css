@@ -1,0 +1,500 @@
+@import url(
+  'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap'
+);
+
+/* ===================================================== */
+/* ====================== GLOBAL ======================= */
+/* ===================================================== */
+
+* {
+  font-family:
+    'IBM Plex Sans Arabic',
+    sans-serif !important;
+
+  box-sizing: border-box;
+}
+
+/*
+  IMPORTANT:
+  لا نستخدم overflow: hidden على body
+  لأنه يمنع Google من عمل Scroll.
+*/
+
+/* ===================================================== */
+/* ====================== ADD BTN ====================== */
+/* ===================================================== */
+
+#openPopup {
+  position: fixed;
+
+  bottom: 22px;
+  right: 22px;
+
+  width: 60px;
+  height: 60px;
+
+  border: none;
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3b82f6,
+      #2563eb
+    );
+
+  color: white;
+
+  font-size: 34px;
+
+  cursor: pointer;
+
+  z-index: 99999999;
+
+  box-shadow:
+    0 10px 30px rgba(59,130,246,0.45);
+
+  transition: 0.3s;
+}
+
+#openPopup:hover {
+  transform:
+    scale(1.08);
+}
+
+/* ===================================================== */
+/* ======================== POPUP ====================== */
+/* ===================================================== */
+
+#popup {
+  position: fixed;
+
+  bottom: 95px;
+  right: 22px;
+
+  width: 290px;
+
+  padding: 18px;
+
+  border-radius: 24px;
+
+  background:
+    rgba(15,23,42,0.96);
+
+  backdrop-filter:
+    blur(25px);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  display: none;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  z-index: 99999999;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.4);
+}
+
+#popup.show {
+  display: flex;
+}
+
+/* ===================================================== */
+/* ======================== LABEL ====================== */
+/* ===================================================== */
+
+.label {
+  font-size: 13px;
+
+  opacity: 0.8;
+}
+
+/* ===================================================== */
+/* ======================== INPUT ====================== */
+/* ===================================================== */
+
+#popup input {
+  width: 100%;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  outline: none;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  color: white;
+
+  font-size: 13px;
+}
+
+#popup input::placeholder {
+  color:
+    rgba(255,255,255,0.45);
+}
+
+/* ===================================================== */
+/* ====================== ADD BUTTON =================== */
+/* ===================================================== */
+
+#addBtn {
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #3b82f6,
+      #2563eb
+    );
+
+  color: white;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+#addBtn:hover {
+  transform:
+    scale(1.02);
+}
+
+/* ===================================================== */
+/* ====================== COLOR ROW ==================== */
+/* ===================================================== */
+
+.colorRow {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 8px;
+}
+
+/* ===================================================== */
+/* ===================== COLOR ITEM ==================== */
+/* ===================================================== */
+
+.colorOption {
+  width: 26px;
+  height: 26px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  border:
+    2px solid transparent;
+
+  transition: 0.25s;
+}
+
+.colorOption.active {
+  border:
+    2px solid white;
+
+  box-shadow:
+    0 0 14px rgba(255,255,255,0.45);
+}
+
+/* ===================================================== */
+/* ========================= TASK ====================== */
+/* ===================================================== */
+
+.task {
+  position: fixed;
+
+  width: 260px;
+  height: 330px;
+
+  min-width: 230px;
+  min-height: 290px;
+
+  max-width: 360px;
+  max-height: 460px;
+
+  padding: 16px;
+
+  border-radius: 24px;
+
+  background:
+    rgba(15,23,42,0.88);
+
+  backdrop-filter:
+    blur(20px);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 16px 35px rgba(0,0,0,0.42);
+
+  z-index: 999999;
+
+  user-select: none;
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+/* ===================================================== */
+/* ========================= TITLE ===================== */
+/* ===================================================== */
+
+.task h3 {
+  margin: 0;
+
+  font-size: 22px;
+
+  text-align: center;
+
+  width: 100%;
+}
+
+/* ===================================================== */
+/* ====================== REMAIN BOX =================== */
+/* ===================================================== */
+
+.remainBox {
+  width: 90%;
+
+  height: 105px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  padding: 10px;
+}
+
+/* ===================================================== */
+/* ===================== REMAIN TEXT =================== */
+/* ===================================================== */
+
+.remainLabel {
+  font-size: 11px;
+
+  opacity: 0.7;
+
+  letter-spacing: 2px;
+}
+
+/* ===================================================== */
+/* ====================== COUNTDOWN ==================== */
+/* ===================================================== */
+
+.countdown {
+  font-size: 46px;
+
+  font-weight: bold;
+
+  line-height: 1;
+}
+
+/* ===================================================== */
+/* ======================== DAYS ======================= */
+/* ===================================================== */
+
+.daysText {
+  font-size: 14px;
+
+  opacity: 0.7;
+
+  letter-spacing: 2px;
+}
+
+/* ===================================================== */
+/* ===================== PROGRESS ====================== */
+/* ===================================================== */
+
+.progressWrap {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.progressRing {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.progressInner {
+  width: 72%;
+  height: 72%;
+
+  border-radius: 50%;
+
+  background:
+    rgba(15,23,42,0.95);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.progressPercent {
+  font-size: 20px;
+
+  font-weight: bold;
+}
+
+.progressText {
+  font-size: 8px;
+
+  opacity: 0.7;
+}
+
+/* ===================================================== */
+/* ======================== QUOTE ====================== */
+/* ===================================================== */
+
+.quoteBox {
+  width: 90%;
+
+  padding: 10px;
+
+  border-radius: 14px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  text-align: center;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  margin-top: auto;
+}
+
+/* ===================================================== */
+/* ====================== DELETE BTN =================== */
+/* ===================================================== */
+
+.deleteBtn {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  width: 34px;
+  height: 34px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    rgba(239,68,68,0.14);
+
+  color: #ff4d4d;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  transition: 0.25s;
+}
+
+.task:hover .deleteBtn {
+  opacity: 1;
+}
+
+/* ===================================================== */
+/* ==================== RESIZE HANDLES ================= */
+/* ===================================================== */
+
+.resize-handle {
+  position: absolute;
+
+  background: transparent;
+
+  z-index: 999999999;
+}
+
+.resize-right {
+  top: 0;
+
+  right: -6px;
+
+  width: 12px;
+
+  height: 100%;
+
+  cursor: ew-resize;
+}
+
+.resize-bottom {
+  bottom: -6px;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 12px;
+
+  cursor: ns-resize;
+}
+
+.resize-corner {
+  right: -6px;
+
+  bottom: -6px;
+
+  width: 18px;
+
+  height: 18px;
+
+  cursor: nwse-resize;
+}
